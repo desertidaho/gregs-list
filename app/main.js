@@ -1,4 +1,3 @@
-// @ts-nocheck
 import HouseController from "./components/houseController.js"
 
 class App {
