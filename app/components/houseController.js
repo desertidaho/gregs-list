@@ -4,7 +4,6 @@ import HouseService from "./houseService.js"
 let _hs = new HouseService
 
 function draw() {
-  console.log('bingo')
   let houses = _hs.Houses
   let template = ''
   houses.forEach(house => {

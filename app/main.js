@@ -1,7 +1,7 @@
 import HouseController from "./components/houseController.js"
 
 class App {
-  contstructor() {
+  constructor() {
     this.controllers = {
       houseController: new HouseController()
     }

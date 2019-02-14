@@ -8,21 +8,21 @@ let _state = {
       location: 'San Diego',
       description: 'The perfect home in the perfect US city.',
       price: 650000,
-      img: '<i class="fas fa-laptop img-fluid fa-5x mt-3"></i>',
+      img: '<i class="fas fa-laptop img-fluid fa-5x mt-3"></i>'
     }),
     new House({
       title: 'Idaho Dream',
       location: 'Boise',
       description: 'The perfect home in the perfect US city.',
       price: 350000,
-      img: '<i class="fas fa-laptop img-fluid fa-5x mt-3"></i>',
+      img: '<i class="fas fa-laptop img-fluid fa-5x mt-3"></i>'
     }),
     new House({
       title: 'Nevada Dream',
       location: 'Las Vegas',
       description: 'The perfect home in the perfect US city.',
       price: 450000,
-      img: '<i class="fas fa-laptop img-fluid fa-5x mt-3"></i>',
+      img: '<i class="fas fa-laptop img-fluid fa-5x mt-3"></i>'
     })
   ]
 }

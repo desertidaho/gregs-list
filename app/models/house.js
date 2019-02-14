@@ -13,7 +13,7 @@ export default class House {
 
   getTemplate() {
     return `
-        <div class="card col-4 mx-2 text-center bg-light shadow-sm mt-4">
+        <div class="card col-3 mx-3 text-center bg-light shadow-sm mt-4">
              ${this.img}
             <div class="card-body text-left">
                 <h5 class="card-title">${this.title}</h5>
