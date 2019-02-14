@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+.side-nav {
+  border-right: 1px solid black;
+}
+
+.house-form,
+.card,
+#remove-btn,
+#view-btn {
+  border-radius: 5px;
+}
