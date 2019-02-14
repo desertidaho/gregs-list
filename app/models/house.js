@@ -20,7 +20,7 @@ export default class House {
                 <p class="card-text">${this.location}</p> 
                 <p class="card-text">${this.description}</p> 
                 <p>${this.price}</p>
-                <button class="btn-outline-primary py-1 shadow-sm" id="delete-btn" onclick="app.controllers.jobController.deleteHouse(${this.id})">Delete</button>
+                <button class="btn-outline-primary py-1 shadow-sm" id="delete-btn" onclick="app.controllers.houseController.deleteHouse(${this.id})">Delete</button>
                 <button class="btn-outline-success py-1 shadow-sm"
                 id="view-btn"
                 onclick="app.controllers.jobController.viewHouse(${this.id})">View</button>
