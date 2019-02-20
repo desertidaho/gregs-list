@@ -1,4 +1,5 @@
-import HouseController from "./components/houseController.js"
+import HouseController from "./components/house/houseController.js";
+
 
 class App {
   constructor() {

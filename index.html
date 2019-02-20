@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Greg's List</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
@@ -34,30 +34,21 @@
           <a href="">
             <li class="mt-2">Jobs</li>
           </a>
-          <a href="">
-            <li class="mt-2">Free</li>
-          </a>
         </ul>
       </div>
 
-      <div class="col-9 ml-5 mt-3">
-        <form onsubmit="app.controllers.houseController.addHouse(event)">
-          <input required type="text" class="house-form" name="title" placeholder="  Title...">
-          <input required type="text" class="house-form" name="location" placeholder="  Location...">
-          <input required type="text" class="house-form" name="description" placeholder="  Description...">
-          <input required type="number" class="house-form" name="price" placeholder="  Price...">
-          <input required type="url" class="house-form" name="img" placeholder="  Image...">
-          <button class="btn-outline-dark house-form shadow-sm" type="submit">Add House</button>
-        </form>
-
-        <div class="row" id="house-cards">
-          <!-- cards -->
-        </div>
-
+      <div class="col-9 ml-5 mt-3" id="forms">
+        <!-- insert forms here -->
       </div>
+      <div class="row" id="content-cards">
+        <!-- cards -->
+      </div>
+
+
     </div>
 
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
   <script type="module" src="app/main.js"></script>
 </body>
 
