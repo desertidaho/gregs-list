@@ -23,24 +23,19 @@
     </header>
 
     <div class="row mt-4">
-      <div class="col-2 side-nav">
-        <ul class="d-flex flex-column align-items-end">
-          <a href="">
-            <li>Houses</li>
-          </a>
-          <a href="">
-            <li class="mt-2">Cars</li>
-          </a>
-          <a href="">
-            <li class="mt-2">Jobs</li>
-          </a>
-        </ul>
+      <div class="col-2 side-nav d-flex flex-column align-items-end">
+        <button class="btn btn btn-outline-dark nav-btn shadow"
+          onclick="app.controllers.houseController.getHouses()">Houses</button>
+        <button class="btn btn btn-outline-dark nav-btn shadow mt-2" href=""
+          onclick="app.controllers.carController.getCars()">Cars</button>
+        <button class="btn btn btn-outline-dark nav-btn shadow mt-2" href=""
+          onclick="app.controllers.jobController.getJobs()">Jobs</button>
       </div>
 
-      <div class="col-9 ml-5 mt-3" id="forms">
+      <div class="col-10 d-flex justify-content-start align-items-center" id="forms">
         <!-- insert forms here -->
       </div>
-      <div class="row" id="content-cards">
+      <div class="row d-flex justify-content-center" id="content-cards">
         <!-- cards -->
       </div>
 

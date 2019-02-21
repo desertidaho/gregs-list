@@ -48,7 +48,10 @@ export default class HouseService {
   }
 
   deleteHouse(id) {
-
+    _api.delete('houses/' + id)
+      .then(res => {
+        this.getApiHouses()
+      })
   }
 
 

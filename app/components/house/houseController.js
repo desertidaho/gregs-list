@@ -14,11 +14,12 @@ function draw() {
   document.querySelector('#forms').innerHTML = `
         <form onsubmit="app.controllers.houseController.addHouse(event)">
           <input required type="number" class="house-form" name="year" placeholder="  Year...">
-          <input required type="number" class="house-form" name="bedroom" placeholder="  Bedroom...">
-          <input required type="number" class="house-form" name="bathroom" placeholder="  Bathroom...">
+          <input required type="number" class="house-form" name="bedrooms" placeholder="  Bedroom...">
+          <input required type="number" class="house-form" name="bathrooms" placeholder="  Bathroom...">
           <input required type="number" class="house-form" name="price" placeholder="  Price...">
-          <input required type="url" class="house-form" name="img" placeholder="  Image...">
-          <button class="btn-outline-dark house-form shadow-sm" type="submit">Add House</button>
+          <input required type="number" class="house-form" name="levels" placeholder="  Levels...">
+          <input required type="url" class="house-form" name="imgUrl" placeholder="  Image...">
+          <button class="btn-outline-dark shadow" type="submit">Add House</button>
         </form>
   `
 }
@@ -39,13 +40,18 @@ export default class HouseController {
     let form = event.target
     let newHouse = {
       year: form.year.value,
-      bedroom: form.bedroom.value,
-      bathroom: form.bathroom.value,
+      bedrooms: form.bedrooms.value,
+      bathrooms: form.bathrooms.value,
       price: form.price.value,
+      levels: form.levels.value,
       imgUrl: form.imgUrl.value
     }
     _hs.addHouse(newHouse)
     form.reset()
+  }
+
+  getHouses() {
+    _hs.getApiHouses()
   }
 
 }
