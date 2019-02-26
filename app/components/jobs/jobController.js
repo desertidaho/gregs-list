@@ -48,7 +48,7 @@ export default class JobController {
   }
 
   getJobs() {
-    _js.getApiJobs()
+    _js.getMyJobs()
   }
 
 }

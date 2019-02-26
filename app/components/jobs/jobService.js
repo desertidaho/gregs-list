@@ -1,9 +1,8 @@
 import Job from "../../models/job.js"
 
 //Private
-
-let _api = axios.create({
-  baseURL: 'https://bcw-gregslist.herokuapp.com/api'
+let _myServer = axios.create({
+  baseURL: '//localhost:3000/api'
 })
 
 let _state = {
@@ -31,8 +30,8 @@ export default class JobService {
     return _state.jobs
   }
 
-  getApiJobs() {
-    _api.get('jobs')
+  getMyJobs() {
+    _myServer.get('jobs')
       .then(res => {
         let data = res.data.data.map(j => new Job(j))
         setState('jobs', data)
@@ -41,19 +40,17 @@ export default class JobService {
 
   addJob(rawJob) {
     let newJob = new Job(rawJob)
-    _api.post('jobs', newJob)
+    _myServer.post('jobs', newJob)
       .then(res => {
-        this.getApiJobs()
+        this.getMyJobs()
       })
   }
 
   deleteJob(id) {
-    _api.delete('jobs/' + id)
+    _myServer.delete('jobs/' + id)
       .then(res => {
-        this.getApiJobs()
+        this.getMyJobs()
       })
   }
-
-
 
 }

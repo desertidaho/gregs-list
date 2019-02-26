@@ -54,7 +54,7 @@ export default class CarController {
   }
 
   getCars() {
-    _cs.getApiCars()
+    _cs.getMyCars()
   }
 
 }

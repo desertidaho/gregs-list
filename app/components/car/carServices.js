@@ -1,8 +1,8 @@
 import Car from "../../models/car.js";
 //PRIVATE
 
-let _api = axios.create({
-  baseURL: 'https://bcw-gregslist.herokuapp.com/api'
+let _myServer = axios.create({
+  baseURL: '//localhost:3000/api'
 })
 
 let _state = {
@@ -31,26 +31,26 @@ export default class CarService {
   }
 
   //Initialize or Get all Current Cars
-  getApiCars() {
-    _api.get('cars')
+  getMyCars() {
+    _myServer.get('cars')
       .then(res => {
-        let carData = res.data.data.map(c => new Car(c))
+        let carData = res.data.map(c => new Car(c))
         setState('cars', carData)
       })
   }
 
   addCar(rawCar) {
     let newCar = new Car(rawCar)
-    _api.post('cars', newCar)
+    _myServer.post('cars', newCar)
       .then(res => {
-        this.getApiCars()
+        this.getMyCars()
       })
   }
 
   deleteCar(id) {
-    _api.delete('cars/' + id)
+    _myServer.delete('cars/' + id)
       .then(res => {
-        this.getApiCars()
+        this.getMyCars()
       })
   }
 
@@ -58,9 +58,9 @@ export default class CarService {
     let car = _state.cars.find(c => c._id == carToFindId)
     car.price = parseInt(car.price)
     car.price++
-    _api.put('cars/' + car._id, car)
+    _myServer.put('cars/' + car._id, car)
       .then(res => {
-        this.getApiCars()
+        this.getMyCars()
       })
   }
 
