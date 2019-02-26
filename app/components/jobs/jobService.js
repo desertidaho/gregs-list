@@ -33,7 +33,7 @@ export default class JobService {
   getMyJobs() {
     _myServer.get('jobs')
       .then(res => {
-        let data = res.data.data.map(j => new Job(j))
+        let data = res.data.map(j => new Job(j))
         setState('jobs', data)
       })
   }
